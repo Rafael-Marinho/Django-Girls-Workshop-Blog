@@ -1,20 +1,11 @@
-<html>
-    <head>
-        <title>O NOVO NAMORADO DA TUA MÃE</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">BLOG DO CARAIO_</a></h1>
-        </div>
-        <div>
-            <p>publicado quando tu tomava banho</p>
-            <h2><a href="">POSTAGEM M1L GR4U _\|/_</a></h2>
-            <p>Fui no Python Vale e o Masanori-sen.py não tava lá.</p>
-        </div>
-        <div>
-            <p>publicado quando tu dormia</p>
-            <h2><a href="">POSTAGEM Z1K4</a></h2>
-	    <p>MASANORI-SEN.PY -  WHY U NO NOTICES ME!?</p>
-        </div>
-     </body>
-</html>
+<div>
+	    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+	            <p>published: {{ post.published_date }}</p>
+		            <h1><a href="">{{ post.title }}</a></h1>
+			            <p>{{ post.text|linebreaksbr }}</p>
+				        </div>
+					{% endfor %}
